@@ -1,0 +1,2 @@
+March 27, 2026:
+> This app created, the purpose is to have blur bg automatically on empty space. I do this because of Umamusume thumbnail
