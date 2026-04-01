@@ -398,10 +398,13 @@ class VideoProcessorApp:
 
         ext = os.path.splitext(src)[1].lower()
         is_image = ext in IMAGE_EXTS
+        base_name = os.path.splitext(os.path.basename(src))[0]
+        default_name = f"{base_name}_BG_Blur_Fill"
 
         if is_image:
             out_path = filedialog.asksaveasfilename(
                 defaultextension=".png",
+                initialfile=f"{default_name}.png",
                 filetypes=[("PNG image", "*.png"), ("JPEG image", "*.jpg;*.jpeg"), ("All files", "*.*")],
                 title="Save processed image as...",
             )
@@ -415,6 +418,7 @@ class VideoProcessorApp:
         else:
             out_path = filedialog.asksaveasfilename(
                 defaultextension=".mp4",
+                initialfile=f"{default_name}.mp4",
                 filetypes=[("MP4 video", "*.mp4")],
                 title="Save processed video as...",
             )

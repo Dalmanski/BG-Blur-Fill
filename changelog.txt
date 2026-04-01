@@ -5,3 +5,6 @@ Update:
 > Redesign into user friendly
 > Can see "Please select your file. Supported: images and videos"
 > Fit image width and height on preview image
+
+April 01, 2026:
+> When saving files, it will already default name "{filename}_BG_Blur_Fill"
